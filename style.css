@@ -103,3 +103,59 @@ h2{
         margin: 5px 1; 
     }
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+}
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3 ease;
+}
+
+.nav-links li a:hover{
+    color: yellow;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .nav-links{
+        display:none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .nav-links.show{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+}
