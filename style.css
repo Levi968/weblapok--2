@@ -149,10 +149,15 @@ h2{
         width: 200px;
         padding: 10px;
         border-radius: 8px;
+        
+        max-height: 0;
+        overflow:hidden;
+        transition:max-height 0.4s ease-out;
     }
 
     .nav-links.show{
         display: flex;
+        max-height: 300px;
     }
 
     .menu-toggle{
